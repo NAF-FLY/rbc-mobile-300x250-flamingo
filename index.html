@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=300, height=250, initial-scale=1.0" />
   <meta name="ad.size" content="width=300,height=250" />
   <script type="text/javascript" src="https://ds.serving-sys.ru/BurstingScript/EBLoader.js"></script>
-  <title>RBC Mobile 300x250 Leopard</title>
+  <title>RBC Mobile 300x250 Flamingo</title>
   <style>
     html,
     body {
@@ -48,8 +48,8 @@
       bottom: 0;
       width: 300px;
       height: 96px;
-      z-index: 3;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .2) 40%, rgba(0, 0, 0, .76) 100%);
+      z-index: 7;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .45) 40%, rgba(0, 0, 0, 1) 100%);
     }
 
     .corner-logo {
@@ -63,32 +63,21 @@
       animation: cornerLogoFade .35s ease-out 1.05s forwards;
     }
 
-    .boss,
-    .leopard {
+    .flamingo {
       will-change: transform;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
       transform-origin: center center;
     }
 
-    .boss {
-      left: 0;
-      top: 0;
-      width: 300px;
-      height: 250px;
-      z-index: 1;
-      transform: translate3d(-150px, 125px, 0) scale3d(2.244, 2.244, 1);
-      animation: bossAnim 9.6s forwards;
-    }
-
-    .leopard {
-      left: 150px;
-      top: 33px;
-      width: 153px;
-      height: 217px;
-      z-index: 2;
-      transform: translate3d(20px, 182px, 0) scale3d(2.8861, 2.8861, 1);
-      animation: leopardAnim 9.6s forwards;
+    .flamingo {
+      left: -261px;
+      top: -87px;
+      width: 735px;
+      height: 730px;
+      z-index: 6;
+      transform: translate3d(24px, 208px, 0) scale3d(1.5, 1.5, 1);
+      animation: flamingoAnim 7.2s forwards;
     }
 
     .offer-card,
@@ -107,7 +96,7 @@
       bottom: 0;
       width: 300px;
       height: 78px;
-      background: linear-gradient(180deg, rgba(111, 116, 126, 0) 0%, rgba(111, 116, 126, .9) 100%);
+      background: transparent;
       opacity: 0;
       z-index: 4;
       transform: translate3d(0, 42px, 0);
@@ -116,7 +105,8 @@
 
     .offer-card {
       left: 50%;
-      bottom: 18px;
+      top: 5px;
+      bottom: auto;
       width: 290px;
       height: 101px;
       margin-left: -145px;
@@ -124,7 +114,6 @@
       border-radius: 14px;
       overflow: hidden;
       transform: translate3d(0, 0, 0);
-      animation: cardLift .8s cubic-bezier(.22, .7, .2, 1) 6s forwards;
     }
 
     .offer-card::before {
@@ -134,12 +123,14 @@
       border-radius: 14px;
       background: #000;
       box-shadow: 0 16px 40px rgba(0, 0, 0, .22);
-      clip-path: inset(100% 0 0 0 round 14px);
+      clip-path: inset(0 0 100% 0 round 14px);
       animation: cardReveal .9s cubic-bezier(.33, 1, .68, 1) 2s forwards;
     }
 
-    .offer-card > * {
+    .offer-card-inner {
       position: relative;
+      width: 100%;
+      height: 100%;
       z-index: 1;
     }
 
@@ -251,8 +242,8 @@
 
     .offer-bottom {
       position: absolute;
-      right: 0px;
-      bottom: 0px;
+      right: 10px;
+      bottom: 10px;
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
@@ -286,6 +277,7 @@
       overflow: hidden;
       border: 0;
       border-radius: 999px;
+      z-index: 8;
       transform: translate3d(0, 0, 0);
     }
 
@@ -320,7 +312,7 @@
     .disclaimer {
       left: 4px;
       bottom: 5px;
-      z-index: 6;
+      z-index: 9;
       width: 290px;
       font-weight: 400;
       font-size: 5px;
@@ -383,66 +375,30 @@
       display: block;
     }
 
-    @keyframes leopardAnim {
+    @keyframes flamingoAnim {
       from {
-        transform: translate3d(20px, 182px, 0) scale3d(2.8861, 2.8861, 1);
-        animation-timing-function: cubic-bezier(.22, .12, .38, 1);
+        transform: translate3d(24px, 208px, 0) scale3d(1.5, 1.5, 1);
+        animation-timing-function: cubic-bezier(.3, 0, .7, 1);
       }
 
-      10.4% {
-        transform: translate3d(19px, 171px, 0) scale3d(2.773, 2.773, 1);
+      13.9% {
+        transform: translate3d(26px, 187px, 0) scale3d(1.38, 1.38, 1);
         animation-timing-function: cubic-bezier(.16, .68, .16, 1);
       }
 
-      95% {
-        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-      }
-
       to {
-        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-      }
-    }
-
-    @keyframes bossAnim {
-      from {
-        transform: translate3d(-150px, 125px, 0) scale3d(2.244, 2.244, 1);
-        animation-timing-function: cubic-bezier(.22, .12, .38, 1);
-      }
-
-      10.4% {
-        transform: translate3d(-141px, 118px, 0) scale3d(2.169, 2.169, 1);
-        animation-timing-function: cubic-bezier(.16, .68, .16, 1);
-      }
-
-      95% {
-        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-      }
-
-      to {
-        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+        transform: translate3d(44px, -41px, 0) scale3d(.5, .5, 1);
       }
     }
 
 
     @keyframes cardReveal {
       from {
-        clip-path: inset(100% 0 0 0 round 14px);
+        clip-path: inset(0 0 100% 0 round 14px);
       }
 
       to {
         clip-path: inset(0 0 0 0 round 14px);
-      }
-    }
-
-    @keyframes cardLift {
-      from {
-        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-        height: 101px;
-      }
-
-      to {
-        transform: translate3d(0, -34px, 0) scale3d(1, 1, 1);
-        height: 78px;
       }
     }
 
@@ -572,15 +528,15 @@
   </style>
 </head>
 <body>
-  <a class="banner" id="button1" href="%banner.reference_mrc_user1%" target="%banner.target%" aria-label="RBC Mobile 300x250 Leopard">
+  <a class="banner" id="button1" href="%banner.reference_mrc_user1%" target="%banner.target%" aria-label="RBC Mobile 300x250 Flamingo">
     <img class="failover-image" src="failover.jpg" alt="" />
     <img class="layer bg key-asset" src="bg.png" alt="" />
-    <img class="layer boss key-asset" src="boss.png" alt="" />
-    <img class="layer leopard key-asset" src="leopard.png" alt="" />
+    <img class="layer flamingo key-asset" src="flamingo.png" alt="" />
     <img class="layer corner-logo key-asset" src="logo.png" alt="" aria-hidden="true" />
     <div class="layer bottom-fade" aria-hidden="true"></div>
     <div class="bottom-panel-glow" aria-hidden="true"></div>
     <div class="offer-card">
+      <div class="offer-card-inner">
       <div class="offer-title" aria-label="headline animation">
         <span class="title-row row-1">
           <span class="title-face current">
@@ -641,6 +597,7 @@
       </div>
       <div class="offer-bottom">
         <img class="t2-logo key-asset" data-gif-src="logotype.gif" data-gif-delay="2840" alt="" aria-hidden="true" />
+      </div>
       </div>
     </div>
     <div class="cta-button">
